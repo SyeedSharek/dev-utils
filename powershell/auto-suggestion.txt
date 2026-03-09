@@ -1,0 +1,23 @@
+For Auto Suggestion in Window Powershell 
+
+
+-------------Step---------
+
+1)  Install-Module PSReadLine -Scope CurrentUser -Force
+
+2)  Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
+
+3) Set-PSReadLineOption -PredictionSource History -PredictionViewStyle ListView
+
+
+
+run this command 
+1 )notepad $PROFILE
+
+then save this line in notepad 
+
+# Enable history-based suggestions
+Set-PSReadLineOption -PredictionSource History -PredictionViewStyle ListView
+
+# Save command history incrementally so it persists across sessions
+Set-PSReadLineOption -HistorySaveStyle SaveIncrementally
